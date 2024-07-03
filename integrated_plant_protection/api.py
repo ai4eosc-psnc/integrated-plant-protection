@@ -515,7 +515,7 @@ def get_train_args():
 
 
     use_preprocess_model = default_conf['base']['use_preprocess_model']
-    use_preprocess_model_list = [x for x in os.listdir(paths.get_preprocess_models_dir()) if x.endswith(".pth")]
+    use_preprocess_model_list = [x for x in os.listdir(paths.get_preprocess_models_dir()) if x.endswith(".pth") or x.endswith(".pt")]
     print(f"\n\n\n\n { use_preprocess_model_list}")
     use_preprocess_model_list = sorted(use_preprocess_model_list)
     use_preprocess_model_list.insert(0,'')
